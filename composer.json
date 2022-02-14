@@ -29,7 +29,7 @@
   "require-dev": {},
   "config": {
     "process-timeout": 0,
-    "sort-packages": true
+    "sort-packages": true,
   },
   "extra": {
     "composer-exit-on-patch-failure": true,
@@ -42,7 +42,10 @@
         "[profile-root]/.editorconfig": false,
         "[profile-root]/.gitattributes": false,
         "[profile-root]/.travis.yml": false,
-        "[profile-root]/acquia-pipelines.yml": false
+        "[profile-root]/acquia-pipelines.yml": false,
+        "[web-root]/sites/default/default.settings.php": {
+            "append": "./patches/d9-acms-settings.patch"
+        }
       },
       "gitignore": true,
       "locations": {
